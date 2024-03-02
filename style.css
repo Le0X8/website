@@ -64,13 +64,6 @@ body {
   margin-right: 2.5rem;
 }
 
-#skills h4 {
-  font-size: 0.9rem;
-  font-weight: 400;
-  margin: 0.5rem 0;
-  color: #ccc;
-}
-
 #skills img {
   height: 2.5rem;
   transition-duration: 0.33s;
@@ -83,76 +76,90 @@ body {
 
 /* Colors from simple-icons and filter by https://cdpn.io/sosuke/fullpage/Pjoqqp */
 
-#skills img.html {
+img.html {
   filter: invert(38%) sepia(62%) saturate(2656%) hue-rotate(348deg) brightness(93%) contrast(91%);
 }
 
-#skills img.css {
+img.css {
   filter: invert(30%) sepia(98%) saturate(887%) hue-rotate(177deg) brightness(97%) contrast(91%);
 }
 
-#skills img.js {
+img.js {
   filter: invert(86%) sepia(75%) saturate(1456%) hue-rotate(339deg) brightness(101%) contrast(94%);
 }
 
-#skills img.php {
+img.php {
   filter: invert(52%) sepia(11%) saturate(1481%) hue-rotate(198deg) brightness(93%) contrast(91%);
 }
 
-#skills img.v {
+img.v {
   filter: invert(63%) sepia(15%) saturate(1498%) hue-rotate(176deg) brightness(79%) contrast(87%);
 }
 
-#skills img.java {
+img.java {
   filter: invert(43%) sepia(25%) saturate(1478%) hue-rotate(356deg) brightness(104%) contrast(86%);
 }
 
-#skills img.py {
+img.py {
   filter: invert(42%) sepia(9%) saturate(3303%) hue-rotate(166deg) brightness(96%) contrast(89%);
 }
 
-#skills img.scss {
+img.scss {
   filter: invert(59%) sepia(89%) saturate(863%) hue-rotate(292deg) brightness(85%) contrast(85%);
 }
 
-#skills img.node {
+img.node {
   filter: invert(48%) sepia(19%) saturate(2440%) hue-rotate(75deg) brightness(95%) contrast(73%);
 }
 
-#skills img.npm {
+img.npm {
   filter: invert(35%) sepia(69%) saturate(1922%) hue-rotate(336deg) brightness(80%) contrast(101%);
 }
 
-#skills img.vscode {
+img.vscode {
   filter: invert(29%) sepia(83%) saturate(3228%) hue-rotate(187deg) brightness(94%) contrast(101%);
 }
 
-#skills img.deb {
+img.deb {
   filter: invert(18%) sepia(47%) saturate(4277%) hue-rotate(334deg) brightness(88%) contrast(96%);
 }
 
-#skills img.apache {
+img.apache {
   filter: invert(14%) sepia(100%) saturate(3606%) hue-rotate(349deg) brightness(99%) contrast(89%);
 }
 
-#skills img.nginx {
+img.nginx {
   filter: invert(31%) sepia(51%) saturate(3624%) hue-rotate(132deg) brightness(92%) contrast(101%);
 }
 
-#skills img.mariadb {
+img.mariadb {
   filter: invert(15%) sepia(24%) saturate(4483%) hue-rotate(166deg) brightness(90%) contrast(103%);
+}
+
+img.svg {
+  filter: invert(68%) sepia(17%) saturate(1808%) hue-rotate(343deg) brightness(110%) contrast(105%);
+}
+
+img.rs {
+  filter: invert(100%);
 }
 
 
 
 #skill-exp {
-  margin-top: 19rem;
+  margin-top: 5rem;
+}
+
+#skill-exp img {
+  height: 1.5rem;
+  transform: translateY(0.34rem);
+  margin-right: 0.25rem;
 }
 
 #skill-exp > div {
   border: 0.25rem solid #111;
   padding: 1rem;
-  margin: 1rem 0;
+  margin: 5rem 0;
   border-radius: 1rem;
 }
 
@@ -161,7 +168,7 @@ body {
   font-weight: 300;
   text-transform: uppercase;
   font-size: 1.5rem;
-  color: #ccc;
+  color: #fff;
   margin: 0;
 }
 
@@ -170,4 +177,177 @@ body {
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 1rem;
+}
+
+#links {
+  text-align: center;
+  clear: both;
+  padding-top: 1rem;
+}
+
+#links a {
+  margin: 0 0.25rem;
+  padding: 0.25rem;
+  border: 0.25rem solid #000;
+  display: inline-block;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 5rem;
+  transform: scale(0.9);
+  transition-duration: 0.33s;
+}
+
+#links img {
+  height: 2rem;
+  width: 2rem;
+  padding: 0.25rem;
+}
+
+#links a:hover {
+  transform: scale(1);
+}
+
+#links #github {
+  filter: invert(100%);
+}
+
+#links #googledev {
+  filter: invert(39%) sepia(100%) saturate(687%) hue-rotate(189deg) brightness(102%) contrast(91%);
+}
+
+#links #instagram {
+  filter: invert(38%) sepia(74%) saturate(3211%) hue-rotate(326deg) brightness(93%) contrast(92%);
+}
+
+#links #youtube {
+  filter: invert(37%) sepia(100%) saturate(6611%) hue-rotate(352deg) brightness(99%) contrast(135%);
+}
+
+#links #reddit {
+  filter: invert(48%) sepia(71%) saturate(6207%) hue-rotate(360deg) brightness(99%) contrast(106%);
+}
+
+#links #discord {
+  filter: invert(31%) sepia(99%) saturate(1396%) hue-rotate(222deg) brightness(99%) contrast(92%);
+}
+
+#projects {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 0.25rem solid #111;
+}
+
+#projects h2 {
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0;
+}
+
+#projects div {
+  margin: 1rem;
+  padding: 1rem;
+  border: 0.25rem solid #111;
+  border-radius: 1rem;
+}
+
+#projects h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0;
+  color: #fff;
+}
+
+#projects h4 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 0.5rem 0;
+  color: #fff;
+}
+
+#projects h6 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+  background: linear-gradient(318deg, #23aeb5 0%, #1b6da4 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+}
+
+#projects ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 1rem;
+}
+
+#projects ul li {
+  display: inline-block;
+}
+
+#projects div > a {
+  filter: invert(100%);
+  transition-duration: 0.33s;
+}
+
+#projects div > a:hover {
+  filter: invert(65%) sepia(99%) saturate(4272%) hue-rotate(161deg) brightness(94%) contrast(101%);
+}
+
+#projects ul li img {
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0.25rem;
+}
+
+p a, p a:visited, p a:focus, p a:active {
+  background: linear-gradient(318deg, #23aeb5 0%, #1b6da4 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  transition-duration: 0.33s;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  transform-style: preserve-3d;
+}
+
+p a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(318deg, #23aeb5 0%, #1b6da4 100%);
+  transition-duration: 0.33s;
+  transform: translateZ(-1px); /* cuz z-index doesn't seem to work properly */
+  border-radius: 0.25rem;
+}
+
+p a:hover {
+  background: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0 0.25rem;
+}
+
+p a:hover::before {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
