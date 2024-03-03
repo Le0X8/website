@@ -16,6 +16,7 @@ gradient.addColorStop(0, '#1b6da4');
 gradient.addColorStop(1, '#23aeb5');
 gradientCtx.fillStyle = gradient;
 gradientCtx.fillRect(0, 0, canvas.width, canvas.height);
+gradientCtx.willReadFrequently = true; // Chrome stuff
 
 const getColor = (x, y) => {
   const pixel = gradientCtx.getImageData(x, y, 1, 1).data;
