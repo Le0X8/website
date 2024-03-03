@@ -68,7 +68,6 @@ main {
 #skills div {
   float: left;
   margin-right: 2.5rem;
-  margin-top: 1rem;
 }
 
 #skills img {
@@ -380,8 +379,8 @@ footer {
   }
 
   #title {
-    margin-left: 0;
     margin-top: 1rem;
+    margin-left: 0;
   }
 
   #title h1, #title h2 {
