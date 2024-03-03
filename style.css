@@ -8,27 +8,33 @@ html, body {
 }
 
 body {
-  padding: 5rem 2.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+main {
+  width: fit-content;
+  max-width: 75rem;
+}
+
+#profile {
+  background-color: #111;
+  width: calc(100% - 2rem);
+  border-radius: 1rem;
+  padding: 1rem;
+  
+  display: flex;
 }
 
 #profile-pic {
-  float: left;
-  width: 16rem;
-  height: 16rem;
-  padding: 1rem;
-  background-color: #111;
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
+  height: 20rem;
+  border-radius: 1rem;
 }
 
 #title {
-  float: left;
-  width: calc(100vw - 25rem);
-  padding: 1rem;
-  background-color: #111;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  height: 16rem;
+  margin-left: 2rem;
 }
 
 #title h1 {
@@ -56,12 +62,13 @@ body {
 }
 
 #skills {
-  margin-top: 3.5rem;
+  margin-top: 2.5rem;
 }
 
 #skills div {
   float: left;
   margin-right: 2.5rem;
+  margin-top: 1rem;
 }
 
 #skills img {
@@ -72,6 +79,10 @@ body {
 
 #skills img:hover {
   transform: scale(1);
+}
+
+#skills h4 {
+  margin: 0.5rem 0;
 }
 
 /* Colors from simple-icons and filter by https://cdpn.io/sosuke/fullpage/Pjoqqp */
@@ -305,6 +316,11 @@ img.rs {
   padding: 0.25rem;
 }
 
+#projects i img {
+  filter: invert(100%);
+  transform: translateY(0.34rem);
+}
+
 p a, p a:visited, p a:focus, p a:active {
   background: linear-gradient(318deg, #23aeb5 0%, #1b6da4 100%);
   background-clip: text;
@@ -350,4 +366,32 @@ footer {
   text-align: center;
   font-size: 0.9rem;
   font-weight: bold;
+  width: 100%;
+}
+
+@media (max-width: 42rem) {
+  #profile {
+    flex-wrap: wrap;
+  }
+
+  #profile-pic {
+    width: 100%;
+    height: auto;
+  }
+
+  #title {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  #title h1, #title h2 {
+    text-align: center;
+    width: 100%;
+  }
+
+  #skills {
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
