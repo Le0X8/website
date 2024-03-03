@@ -1,5 +1,5 @@
 html, body {
-  background-color: #000;
+  background-color: #0000;
   color: #fff;
   padding: 0;
   margin: 0;
@@ -12,6 +12,46 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   padding: 1rem;
+}
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #000;
+  overflow: hidden;
+}
+
+#bg canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+.nojs #bg {
+  background: linear-gradient(318deg, #23aeb5 0%, #1b6da4 100%);
+}
+
+.nojs #bg canvas {
+  display: none;
+}
+
+main > div:not(#profile):not(#links):not(#skill-exp), #skill-exp > div {
+  background-color: #000c;
+}
+
+.nojs main > div:not(#profile):not(#links):not(#skill-exp), .nojs #skill-exp > div {
+  background-color: #0004;
+}
+
+#skill-exp > div > div, #projects > div {
+  background-color: #1118;
 }
 
 main {
@@ -143,7 +183,7 @@ img.nginx {
 }
 
 img.mariadb {
-  filter: invert(15%) sepia(24%) saturate(4483%) hue-rotate(166deg) brightness(90%) contrast(103%);
+  filter: invert(100%);
 }
 
 img.svg {
@@ -153,8 +193,6 @@ img.svg {
 img.rs {
   filter: invert(100%);
 }
-
-
 
 #skill-exp {
   margin-top: 5rem;
@@ -167,7 +205,7 @@ img.rs {
 }
 
 #skill-exp > div {
-  border: 0.25rem solid #111;
+  border: 0.25rem solid #1118;
   padding: 1rem;
   margin: 5rem 0;
   border-radius: 1rem;
@@ -183,7 +221,6 @@ img.rs {
 }
 
 #skill-exp > div > div {
-  border: 0.25rem solid #111;
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 1rem;
@@ -192,7 +229,14 @@ img.rs {
 #links {
   text-align: center;
   clear: both;
-  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.nojs #links {
+  background-color: #0004;
+  border: 0.25rem solid #1118;
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
 #links a {
@@ -245,7 +289,7 @@ img.rs {
   margin-top: 1.5rem;
   padding: 1rem;
   border-radius: 1rem;
-  border: 0.25rem solid #111;
+  border: 0.25rem solid #1118;
 }
 
 #projects h2 {
@@ -260,7 +304,6 @@ img.rs {
 #projects div {
   margin: 1rem;
   padding: 1rem;
-  border: 0.25rem solid #111;
   border-radius: 1rem;
 }
 

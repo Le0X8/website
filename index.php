@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 
-<body>
+<body class="nojs">
+  <script>document.body.classList.remove('nojs');</script>
+  <div id="bg"><canvas alt="Random generated background"></canvas></div>
   <main>
     <div id="profile">
       <img src="https://avatars.githubusercontent.com/u/84378319" alt="LeoX DEV" id="profile-pic">
@@ -213,6 +215,8 @@
   <footer>
     <p>&copy; 2023-<?php echo (floor(time() / 31557600) + 1970) ?> LeoX DEV</p>
   </footer>
+
+  <script src="/bg.js"></script>
 </body>
 
 </html>
