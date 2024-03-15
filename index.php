@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LeoX DEV</title>
+  <title>Leonard Lesinski</title>
   <link rel="stylesheet" href="/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#23aeb5">
+  <meta name="msapplication-TileColor" content="#23aeb5">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#23aeb5">
 </head>
 
 <body class="nojs">
-  <script>document.body.classList.remove('nojs');</script>
+  <script>
+    document.body.classList.remove('nojs');
+  </script>
   <div id="bg"><canvas alt="Random generated background"></canvas></div>
   <main>
     <div id="profile">
-      <img src="https://avatars.githubusercontent.com/u/84378319" alt="LeoX DEV" id="profile-pic">
+      <img src="https://avatars.githubusercontent.com/u/84378319" alt="Leonard Lesinski" id="profile-pic">
       <div id="title">
-        <h1>LeoX DEV</h1>
+        <h1>Leonard Lesinski</h1>
         <h2>Full Stack Developer</h2>
         <div id="skills">
           <div>
@@ -213,7 +223,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2023-<?php echo (floor(time() / 31557600) + 1970) ?> LeoX DEV</p>
+    <p>&copy; 2022-<?php echo (floor(time() / 31557600) + 1970) ?> Leonard Lesinski</p>
   </footer>
 
   <script src="/bg.js"></script>
