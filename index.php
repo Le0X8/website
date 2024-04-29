@@ -61,7 +61,7 @@
     <div id="links">
       <a href="https://github.com/Le0X8" id="github"><img src="https://cdn.jsdelivr.net/npm/simple-icons@10/icons/github.svg" alt="GitHub"></a>
       <a href="https://g.dev/Le0_X8" id="googledev"><img src="https://cdn.jsdelivr.net/npm/simple-icons@10/icons/googlecloud.svg" alt="Google for Developers"></a>
-      <a href="https://instagram.com/leoxdevx" id="instagram"><img src="https://cdn.jsdelivr.net/npm/simple-icons@10/icons/instagram.svg" alt="Instagram"></a>
+      <a href="https://instagram.com/leolesinski" id="instagram"><img src="https://cdn.jsdelivr.net/npm/simple-icons@10/icons/instagram.svg" alt="Instagram"></a>
       <a href="https://youtube.com/@leoxdevx" id="youtube"><img src="https://cdn.jsdelivr.net/npm/simple-icons@10/icons/youtube.svg" alt="YouTube"></a>
       <a href="https://reddit.com/u/Le0_X8" id="reddit"><img src="https://cdn.jsdelivr.net/npm/simple-icons@9/icons/reddit.svg" alt="Reddit"></a>
       <a href="https://discord.com/users/802196106481631283" id="discord"><img src="https://cdn.jsdelivr.net/npm/simple-icons@10/icons/discord.svg" alt="Discord"></a>
