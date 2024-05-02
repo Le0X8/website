@@ -1,0 +1,9 @@
+@import '@fontsource/plus-jakarta-sans';
+@import '@fontsource/fira-mono';
+
+$sans: 'Plus Jakarta Sans', sans-serif;
+$mono: 'Fira Mono', monospace;
+
+html {
+  font-family: $sans;
+}
