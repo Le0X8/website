@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-  <title>{data.meta.title}</title>
+  <title>{data.meta.title} | Leonard Lesinski</title>
   <meta name="description" content={data.meta.description} />
 </svelte:head>
 
