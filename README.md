@@ -1,38 +1,15 @@
-# create-svelte
+# My _new_ website
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+This is my new website. It's going to be awesome and way cleaner than the old one.
 
-## Creating a project
+I also translated the website to German.
 
-If you're seeing this, you've probably already done this step. Congrats!
+The website uses SvelteKit to build the website. Maybe you could use some parts of the code for your own website, if you give me credit.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## License
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Developing
+## [View it live](https://leonard.lesinski.biz/)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+The old website is still available at [leox.dev](https://leox.dev/), maybe the main website will be changed to the new one soon.
