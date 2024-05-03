@@ -3,6 +3,6 @@ title: About
 description: About me
 ---
 
-# About
+# Über mich
 
 hi
