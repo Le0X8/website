@@ -6,5 +6,5 @@
 *.md linguist-documentation=false
 
 *.svx linguist-detectable=true
-*.svx linguist-language=mdSVeX
+*.svx linguist-language=Svelte
 *.svx linguist-documentation=false
