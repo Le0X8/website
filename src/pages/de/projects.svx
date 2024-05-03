@@ -1,8 +1,8 @@
 ---
-title: Projects
-description: My projects
+title: Projekte
+description: Meine Projekte
 ---
 
-# My projects
+# Meine Projekte
 
 hi
