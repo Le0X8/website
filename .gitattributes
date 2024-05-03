@@ -1,2 +1,10 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+*.md linguist-detectable=true
+*.md linguist-language=Markdown
+*.md linguist-documentation=false
+
+*.svx linguist-detectable=true
+*.svx linguist-language=mdSVeX
+*.svx linguist-documentation=false
