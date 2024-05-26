@@ -135,22 +135,16 @@ footer {
   }
 }
 
-@keyframes blink {
+@keyframes fade {
   0% {
-    opacity: 0.5;
-  }
-
-  50% {
     opacity: 0;
   }
 
   100% {
-    opacity: 0.5;
+    opacity: 1;
   }
 }
 
-.cursor::before {
-  content: '|';
-  animation: blink 0.75s infinite;
-  font-weight: 100;
+.c {
+  text-align: center;
 }
