@@ -15,7 +15,7 @@
 <nav
 	class="fixed top-0 flex h-12 w-lvw border-b-2 border-teal-700 bg-transparent text-white backdrop-blur-md"
 >
-	<a href="/">
+	<a href="/" class="overflow-hidden">
 		<header class="px-2 py-1 text-3xl font-thin">Leonard Lesinski</header>
 	</a>
 	<div class="flex-grow"></div>
@@ -45,7 +45,9 @@
 </nav>
 
 <main class="min-h-[calc(100vh-3rem)] bg-teal-950 text-white">
-	<slot />
+	<div class="max-w-3xl mx-auto p-2">
+		<slot />
+	</div>
 </main>
 
 <footer class="w-full bg-teal-700 p-2 text-center text-white">
