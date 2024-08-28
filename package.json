@@ -13,6 +13,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
+		"@sveltejs/adapter-static": "^3.0.4",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@types/eslint": "^8.56.0",
@@ -38,7 +39,6 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource-variable/space-grotesk": "^5.0.18",
-		"@fontsource/space-mono": "^5.0.20",
-		"@sveltejs/adapter-cloudflare": "^4.4.0"
+		"@fontsource/space-mono": "^5.0.20"
 	}
 }
