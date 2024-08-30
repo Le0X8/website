@@ -5,14 +5,14 @@
 	import Logo from '$c/Logo.svelte';
 </script>
 
-<div class="flex h-full w-full flex-col items-center justify-center gap-12">
-	<div class="flex size-fit gap-16">
+<div class="flex h-full w-full flex-col items-center justify-center gap-20 md:gap-12 p-4 md:p-0">
+	<div class="flex flex-col md:flex-row items-center md:items-normal size-fit gap-0 md:gap-16">
 		<ProfilePic className="size-64" />
 
-		<div class="flex translate-y-8 flex-col">
-			<h1 class="main"><Typewriter text="Hello!" delay={0.5} /></h1>
+		<div class="flex translate-y-8 md:translate-y-2 flex-col">
+			<h1 class="text-center font-medium text-[4rem] md:text-[8rem] md:leading-[5rem]"><Typewriter text="Hello!" delay={0.5} /></h1>
 
-			<p class="my-6 text-center text-2xl">
+			<p class="my-6 text-center text-2xl translate-y-[-0.75rem] md:translate-y-0">
 				<Typewriter text="I'm Leo, a Full-Stack developer." delay={1.5} />
 			</p>
 			<div class="flex items-center justify-center gap-2 text-2xl">
@@ -21,7 +21,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="flex gap-6 fill-white">
+	<div class="grid grid-cols-6 md:flex gap-6 fill-white">
 		<a
 			href="https://rust-lang.org"
 			target="_blank"

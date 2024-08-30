@@ -45,7 +45,7 @@
 </nav>
 
 <main class="min-h-[calc(100vh-3rem)] bg-teal-950 text-white">
-	<div class="max-w-3xl mx-auto p-2">
+	<div class="max-w-3xl mx-auto py-8 md:p-2">
 		<slot />
 	</div>
 </main>
