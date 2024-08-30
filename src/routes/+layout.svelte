@@ -13,7 +13,7 @@
 <div class="h-12 bg-teal-950"></div>
 
 <nav
-	class="fixed top-0 flex h-12 w-lvw border-b-2 border-teal-700 bg-transparent text-white backdrop-blur-md"
+	class="fixed top-0 flex h-12 w-lvw border-b-2 border-teal-700 bg-transparent text-white backdrop-blur-md z-50"
 >
 	<a href="/" class="overflow-hidden">
 		<header class="px-2 py-1 text-3xl font-thin">Leonard Lesinski</header>
