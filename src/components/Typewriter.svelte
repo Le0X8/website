@@ -1,7 +1,7 @@
 <script lang="ts">
 	export let text: string;
   export let delay: number = 0;
-	export let speed: number = 0.1;
+	export let speed: number = 0.025;
 
 	const chars = text.split('');
 </script>
