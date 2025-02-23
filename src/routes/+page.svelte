@@ -33,7 +33,10 @@
 		SiCss,
 		SiHtml5,
 		SiEslint,
-		SiPrettier
+		SiPrettier,
+
+		SiTailwindcss
+
 	} from '@icons-pack/svelte-simple-icons';
 	import { Coffee, Grid2X2, MapPin } from 'lucide-svelte';
 </script>
@@ -238,6 +241,13 @@
 				description="CSS preprocessor that adds power and elegance to the basic language"
 				since={2022}
 				url="https://sass-lang.com/"
+			/>
+			<TechCard
+				logo={SiTailwindcss}
+				name="Tailwind CSS"
+				description="Utility-first CSS framework for quickly building custom designs"
+				since={2024}
+				url="https://tailwindcss.com"
 			/>
 			<TechCard
 				logo={SiCss}
