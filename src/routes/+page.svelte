@@ -1,4 +1,5 @@
 <script lang="ts">
+	import SocialLink from '$c/SocialLink.svelte';
 	import TechCard from '$c/TechCard.svelte';
 	import TechCardGrid from '$c/TechCardGrid.svelte';
 	import {
@@ -19,135 +20,61 @@
 		SiNginx,
 		SiApache,
 		SiNodedotjs,
-
 		SiTauri,
-
 		SiFirefox,
-
 		SiArchlinux,
-
 		SiDebian,
-
 		SiUbuntu,
-
 		SiRaspberrypi,
-
 		SiAndroid,
-
 		SiVscodium,
-
 		SiGit,
-
 		SiSass,
-
 		SiCss,
-
 		SiHtml5,
-
 		SiEslint,
-
 		SiPrettier
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	} from '@icons-pack/svelte-simple-icons';
 	import { Coffee, Grid2X2, MapPin } from 'lucide-svelte';
 </script>
 
-<div class="flex h-full justify-center gap-24">
-	<div class="flex flex-col text-xl">
+<div class="flex h-full justify-center gap-24 print:flex-col">
+	<div class="flex flex-col text-xl print:hidden">
 		<img
 			src="https://cdn.donald.org/avatars/CcQEMxiSamRwH6eIdFi5cA.webp"
 			alt="this is me"
-			class="w-74 rounded-full"
+			class="w-74 rounded-full print:h-74"
 		/>
 
 		<ul class="mt-12 flex flex-col gap-4">
-			<li>
-				<a
-					class="flex w-fit items-center gap-3 text-zinc-400 transition hover:text-white"
-					href="https://github.com/Le0X8"
-				>
-					<SiGithub />
-					@Le0X8
-				</a>
-			</li>
-			<li>
-				<a
-					class="flex w-fit items-center gap-3 text-zinc-400 transition hover:text-white"
-					href="https://instagram.com/leolesinski"
-				>
-					<SiInstagram />
-					@leolesinski
-				</a>
-			</li>
-			<li>
-				<a
-					class="flex w-fit items-center gap-3 text-zinc-400 transition hover:text-white"
-					href="https://gruene.social/@Le0_X8"
-				>
-					<SiMastodon />
-					@Le0_X8@gruene.social
-				</a>
-			</li>
-			<li>
-				<a
-					class="flex w-fit items-center gap-3 text-zinc-400 transition hover:text-white"
-					href="https://x.com/le0_x8"
-				>
-					<SiX />
-					@le0_x8
-				</a>
-			</li>
-			<li>
-				<a
-					class="flex w-fit items-center gap-3 text-zinc-400 transition hover:text-white"
-					href="https://reddit.com/u/Le0_X8"
-				>
-					<SiReddit />
-					u/Le0_X8
-				</a>
-			</li>
-			<hr class="border-zinc-700" />
-			<li>
-				<a
-					class="flex w-fit items-center gap-3 text-zinc-400 transition hover:text-white"
-					href="mailto:leo@lesinski.cc"
-				>
-					<SiProtonmail />
-					leo@lesinski.cc
-				</a>
-			</li>
-			<li>
-				<a
-					class="flex w-fit items-center gap-3 text-zinc-400 transition hover:text-white"
-					href="https://t.me/le0_x8"
-				>
-					<SiTelegram />
-					@le0_x8
-				</a>
-			</li>
+			<SocialLink logo={SiGithub} name="@Le0X8" url="https://github.com/Le0X8" />
+			<SocialLink logo={SiInstagram} name="@leolesinski" url="https://instagram.com/leolesinski" />
+			<SocialLink
+				logo={SiMastodon}
+				name="@Le0_X8@gruene.social"
+				url="https://gruene.social/@Le0_X8"
+			/>
+			<SocialLink logo={SiX} name="@le0_x8" url="https://x.com/le0_x8" />
+			<SocialLink logo={SiReddit} name="u/Le0_X8" url="https://reddit.com/u/Le0_X8" />
+			<hr class="border-zinc-500 dark:border-zinc-700" />
+			<SocialLink logo={SiProtonmail} name="leo@lesinski.cc" url="mailto:leo@lesinski.cc" />
+			<SocialLink logo={SiTelegram} name="@le0_x8" url="https://t.me/le0_x8" />
 		</ul>
 	</div>
-	<div class="prose prose-invert flex max-w-256 grow flex-col text-2xl">
+	<div class="prose dark:prose-invert prose-zinc flex max-w-256 grow flex-col text-2xl">
 		<h1 class="mb-0">Leonard Lesinski</h1>
-		<p class="mt-4 mb-0 text-zinc-400">Full Stack Developer</p>
-		<p class="mt-4 flex items-center gap-1 text-lg text-zinc-400">
+		<p class="mt-4 mb-0 text-zinc-600 dark:text-zinc-400">Full Stack Developer</p>
+		<p class="mt-4 flex items-center gap-1 text-lg text-zinc-600 dark:text-zinc-400">
 			<MapPin class="h-5" /> North Rhine-Westphalia, Germany
 		</p>
 
-		<h2 class="mt-6 mb-0">Technologies & Skills</h2>
+		<a
+			class="mt-6 mb-0 text-3xl font-bold no-underline"
+			href="#technologies-and-skills"
+			id="technologies-and-skills"
+		>
+			Technologies & Skills
+		</a>
 
 		<TechCardGrid title="Frameworks">
 			<TechCard
@@ -164,7 +91,7 @@
 				since={2024}
 				url="https://svelte.dev/"
 			/>
-			<TechCard 
+			<TechCard
 				logo={SiTauri}
 				name="Tauri"
 				description="Rust framework for building desktop applications"

@@ -5,9 +5,10 @@
 
 @plugin '@tailwindcss/typography';
 
-html,
-body {
+html {
   font-family: 'Space Grotesk Variable', sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 0.5rem;
 }
 
 @keyframes fade-in {
@@ -37,9 +38,13 @@ body {
     top: var(--y);
     width: var(--size);
     height: var(--size);
-    background: radial-gradient(circle closest-side, #fff2, transparent);
+    background: radial-gradient(circle closest-side, #0002, transparent);
     transform: translate(-50%, -50%);
     transition: width 0.2s ease, height 0.2s ease;
+
+    @media (prefers-color-scheme: dark) {
+      background: radial-gradient(circle closest-side, #fff2, transparent);
+    }
   }
 
   &:hover::before {
