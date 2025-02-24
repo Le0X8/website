@@ -10,7 +10,7 @@
 </script>
 
 <a
-	class="group mx-1 flex flex-col rounded-lg border border-white bg-transparent p-2 my-4 {delay > 0
+	class="group mx-1 my-4 flex flex-col rounded-lg border border-white bg-transparent p-2 {delay > 0
 		? 'fade-in'
 		: ''} {className}"
 	{href}
@@ -21,7 +21,7 @@
 		<slot />
 	</p>
 	{#if logos.length > 0}
-		<div class="py-1 invert flex gap-2">
+		<div class="flex gap-2 py-1 invert">
 			{#each logos as logo}
 				<Logo name={logo} className="size-6" />
 			{/each}

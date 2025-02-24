@@ -1,6 +1,6 @@
 <script lang="ts">
-  export let logo: any;
-  export let name: string;
+	export let logo: any;
+	export let name: string;
 	export let url: string;
 </script>
 
@@ -11,7 +11,7 @@
 		target="_blank"
 		rel="noopener noreferrer"
 	>
-    <svelte:component this={logo}></svelte:component>
+		<svelte:component this={logo}></svelte:component>
 		<span class="hidden md:inline">{name}</span>
 	</a>
 </li>

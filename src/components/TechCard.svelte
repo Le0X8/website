@@ -29,7 +29,7 @@
 </script>
 
 <a
-	class="mouse-cursor-gradient-tracking flex min-h-20 flex-col gap-2 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-zinc-100 p-3 no-underline dark:bg-zinc-900 dark:bg-[url(/pattern.png)] dark:bg-blend-multiply target:bg-teal-100 dark:target:bg-teal-900 target:border-teal-500 dark:target:border-teal-700"
+	class="mouse-cursor-gradient-tracking flex min-h-20 flex-col gap-2 rounded-lg border border-zinc-300 bg-zinc-100 p-3 no-underline target:border-teal-500 target:bg-teal-100 dark:border-zinc-700 dark:bg-zinc-900 dark:bg-[url(/pattern.png)] dark:bg-blend-multiply dark:target:border-teal-700 dark:target:bg-teal-900"
 	href={url}
 	target="_blank"
 	rel="noopener noreferrer"
