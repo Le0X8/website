@@ -7,7 +7,7 @@
 
 <main class="min-h-lvh w-full bg-white dark:bg-zinc-950 py-24 print:py-0 text-zinc-950 dark:text-white">
 	<ChevronsRight class="fixed left-[-20lvh] z-1 size-lvh rotate-30 text-zinc-100 dark:text-zinc-900 print:hidden"></ChevronsRight>
-	<div class="relative z-10 w-full px-24 print:px-0">
+	<div class="relative z-10 w-full px-4 lg:px-24 print:px-0">
 		<slot />
 	</div>
 </main>

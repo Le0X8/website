@@ -12,6 +12,6 @@
 		rel="noopener noreferrer"
 	>
     <svelte:component this={logo}></svelte:component>
-		{name}
+		<span class="hidden md:inline">{name}</span>
 	</a>
 </li>

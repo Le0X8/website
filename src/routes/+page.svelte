@@ -41,15 +41,15 @@
 	import { Coffee, Grid2X2, MapPin } from 'lucide-svelte';
 </script>
 
-<div class="flex h-full justify-center gap-24 print:flex-col">
-	<div class="flex flex-col text-xl print:hidden">
+<div class="flex h-full items-start lg:justify-center gap-6 md:gap-0 lg:gap-24 print:flex-col flex-col md:flex-row">
+	<div class="flex flex-col text-xl print:hidden scale-none items-center w-full md:w-fit md:items-start md:scale-75 lg:scale-none md:-translate-y-[5rem] lg:translate-none">
 		<img
 			src="https://cdn.donald.org/avatars/CcQEMxiSamRwH6eIdFi5cA.webp"
 			alt="this is me"
-			class="w-74 rounded-full print:h-74"
+			class="w-42 md:w-74 rounded-full print:h-74"
 		/>
 
-		<ul class="mt-12 flex flex-col gap-4">
+		<ul class="mt-24 md:mt-12 flex md:flex-col gap-4">
 			<SocialLink logo={SiGithub} name="@Le0X8" url="https://github.com/Le0X8" />
 			<SocialLink logo={SiInstagram} name="@leolesinski" url="https://instagram.com/leolesinski" />
 			<SocialLink
@@ -59,20 +59,20 @@
 			/>
 			<SocialLink logo={SiX} name="@le0_x8" url="https://x.com/le0_x8" />
 			<SocialLink logo={SiReddit} name="u/Le0_X8" url="https://reddit.com/u/Le0_X8" />
-			<hr class="border-zinc-500 dark:border-zinc-700" />
+			<hr class="border-zinc-500 dark:border-zinc-700 hidden md:block" />
 			<SocialLink logo={SiProtonmail} name="leo@lesinski.cc" url="mailto:leo@lesinski.cc" />
 			<SocialLink logo={SiTelegram} name="@le0_x8" url="https://t.me/le0_x8" />
 		</ul>
 	</div>
-	<div class="prose dark:prose-invert prose-zinc flex max-w-256 grow flex-col text-2xl">
-		<h1 class="mb-0">Leonard Lesinski</h1>
+	<div class="prose dark:prose-invert prose-zinc flex max-w-256 grow flex-col text-2xl w-full md:w-fit text-center md:text-left">
+		<h1 class="mb-0 text-4xl md:text-5xl">Leonard Lesinski</h1>
 		<p class="mt-4 mb-0 text-zinc-600 dark:text-zinc-400">Full Stack Developer</p>
-		<p class="mt-4 flex items-center gap-1 text-lg text-zinc-600 dark:text-zinc-400">
+		<p class="mt-4 flex items-center gap-1 text-lg text-zinc-600 dark:text-zinc-400 justify-center md:justify-start">
 			<MapPin class="h-5" /> North Rhine-Westphalia, Germany
 		</p>
 
 		<a
-			class="mt-6 mb-0 text-3xl font-bold no-underline"
+			class="mt-62 md:mt-6 mb-0 text-3xl font-bold no-underline"
 			href="#technologies-and-skills"
 			id="technologies-and-skills"
 		>
