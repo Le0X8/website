@@ -1,34 +1,55 @@
-@use 'tailwindcss/base';
-@use 'tailwindcss/components';
-@use 'tailwindcss/utilities';
+@use 'tailwindcss';
 
 @use '@fontsource-variable/space-grotesk';
 @use '@fontsource/space-mono';
 
-html,
-body {
-  font-family: 'Space Grotesk Variable', sans-serif;
-}
+@plugin '@tailwindcss/typography';
 
-main>div div {
-
-  &.h-full,
-  &.size-full {
-    height: calc(100vh - 4rem);
-  }
+html {
+	font-family: 'Space Grotesk Variable', sans-serif;
+	scroll-behavior: smooth;
+	scroll-padding-top: 0.5rem;
 }
 
 @keyframes fade-in {
-  from {
-    opacity: 0;
-  }
+	from {
+		opacity: 0;
+	}
 
-  to {
-    opacity: 1;
-  }
+	to {
+		opacity: 1;
+	}
 }
 
-.typewriter *,
 .fade-in {
-  animation: fade-in 1s 1s 1 normal both;
+	animation: fade-in 1s 1s 1 normal both;
+}
+
+// Credits: https://codepen.io/chalarangelo/pen/MWMdMaX
+.mouse-cursor-gradient-tracking {
+	overflow: hidden;
+	position: relative;
+
+	&::before {
+		--size: 0;
+		content: '';
+		position: absolute;
+		left: var(--x);
+		top: var(--y);
+		width: var(--size);
+		height: var(--size);
+		background: radial-gradient(circle closest-side, #0002, transparent);
+		transform: translate(-50%, -50%);
+		transition:
+			width 0.2s ease,
+			height 0.2s ease;
+
+		@media (prefers-color-scheme: dark) {
+			background: radial-gradient(circle closest-side, #fff2, transparent);
+		}
+	}
+
+	&:hover::before {
+		--size: 200px;
+	}
 }

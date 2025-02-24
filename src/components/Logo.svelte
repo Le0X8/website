@@ -2,8 +2,8 @@
 	import * as icons from 'simple-icons';
 
 	export let name: keyof typeof icons;
-  export let className: string = '';
-  export let style: string = '';
+	export let className: string = '';
+	export let style: string = '';
 
 	const icon = icons[name] as { svg: string };
 </script>

@@ -1,133 +1,315 @@
 <script lang="ts">
-	import Typewriter from '$c/Typewriter.svelte';
-	import Button from '$c/Button.svelte';
-	import ProfilePic from '$c/ProfilePic.svelte';
-	import Logo from '$c/Logo.svelte';
+	import SocialLink from '$c/SocialLink.svelte';
+	import TechCard from '$c/TechCard.svelte';
+	import TechCardGrid from '$c/TechCardGrid.svelte';
+	import {
+		SiGithub,
+		SiInstagram,
+		SiX,
+		SiProtonmail,
+		SiMastodon,
+		SiReddit,
+		SiTelegram,
+		SiSvelte,
+		SiRust,
+		SiTypescript,
+		SiJavascript,
+		SiPhp,
+		SiPython,
+		SiCloudflare,
+		SiNginx,
+		SiApache,
+		SiNodedotjs,
+		SiTauri,
+		SiFirefox,
+		SiArchlinux,
+		SiDebian,
+		SiUbuntu,
+		SiRaspberrypi,
+		SiAndroid,
+		SiVscodium,
+		SiGit,
+		SiSass,
+		SiCss,
+		SiHtml5,
+		SiEslint,
+		SiPrettier,
+		SiTailwindcss
+	} from '@icons-pack/svelte-simple-icons';
+	import { Coffee, Grid2X2, MapPin } from 'lucide-svelte';
 </script>
 
-<div class="flex h-full w-full flex-col items-center justify-center gap-20 md:gap-12 p-4 md:p-0">
-	<div class="flex flex-col md:flex-row items-center md:items-normal size-fit gap-0 md:gap-16">
-		<ProfilePic className="size-64" />
+<div
+	class="flex h-full flex-col items-start gap-6 md:flex-row md:gap-0 lg:justify-center lg:gap-24 print:flex-col"
+>
+	<div
+		class="flex w-full scale-none flex-col items-center text-xl md:w-fit md:-translate-y-[5rem] md:scale-75 md:items-start lg:translate-none lg:scale-none print:hidden"
+	>
+		<img
+			src="https://cdn.donald.org/avatars/CcQEMxiSamRwH6eIdFi5cA.webp"
+			alt="this is me"
+			class="w-42 rounded-full md:w-74 print:h-74"
+		/>
 
-		<div class="flex translate-y-8 md:translate-y-2 flex-col">
-			<h1 class="text-center font-medium text-[4rem] md:text-[8rem] md:leading-[5rem]"><Typewriter text="Hello!" delay={0.5} /></h1>
-
-			<p class="my-6 text-center text-2xl translate-y-[-0.75rem] md:translate-y-0">
-				<Typewriter text="I'm Leo, a Full-Stack developer." delay={1} />
-			</p>
-			<div class="flex items-center justify-center gap-2 text-2xl">
-				<Button href="/about" main delay={2}>About me</Button>
-				<Button href="/projects" delay={2.5}>My projects</Button>
-			</div>
-		</div>
+		<ul class="mt-24 flex gap-4 md:mt-12 md:flex-col">
+			<SocialLink logo={SiGithub} name="@Le0X8" url="https://github.com/Le0X8" />
+			<SocialLink logo={SiInstagram} name="@leolesinski" url="https://instagram.com/leolesinski" />
+			<SocialLink
+				logo={SiMastodon}
+				name="@Le0_X8@gruene.social"
+				url="https://gruene.social/@Le0_X8"
+			/>
+			<SocialLink logo={SiX} name="@le0_x8" url="https://x.com/le0_x8" />
+			<SocialLink logo={SiReddit} name="u/Le0_X8" url="https://reddit.com/u/Le0_X8" />
+			<hr class="hidden border-zinc-500 md:block dark:border-zinc-700" />
+			<SocialLink logo={SiProtonmail} name="leo@lesinski.cc" url="mailto:leo@lesinski.cc" />
+			<SocialLink logo={SiTelegram} name="@le0_x8" url="https://t.me/le0_x8" />
+		</ul>
 	</div>
-	<div class="grid grid-cols-6 md:flex gap-6 invert">
-		<a
-			href="https://rust-lang.org"
-			target="_blank"
-			rel="noopener"
-			class="opacity-85 transition hover:opacity-100"
+	<div
+		class="prose dark:prose-invert prose-zinc flex w-full max-w-256 grow flex-col text-center text-2xl md:w-fit md:text-left"
+	>
+		<h1 class="mb-0 text-4xl md:text-5xl">Leonard Lesinski</h1>
+		<p class="mt-4 mb-0 text-zinc-600 dark:text-zinc-400">Full Stack Developer</p>
+		<p
+			class="mt-4 flex items-center justify-center gap-1 text-lg text-zinc-600 md:justify-start dark:text-zinc-400"
 		>
-			<Logo name="siRust" className="size-8 fade-in opacity-0" style="animation-delay: 3s;" />
-		</a>
+			<MapPin class="h-5" /> North Rhine-Westphalia, Germany
+		</p>
 
 		<a
-			href="https://svelte.dev"
-			target="_blank"
-			rel="noopener"
-			class="opacity-85 transition hover:opacity-100"
+			class="mt-62 mb-0 text-3xl font-bold no-underline md:mt-6"
+			href="#technologies-and-skills"
+			id="technologies-and-skills"
 		>
-			<Logo name="siSvelte" className="size-8 fade-in opacity-0" style="animation-delay: 3.1s;" />
+			Technologies & Skills
 		</a>
 
-		<a
-			href="https://sass-lang.com"
-			target="_blank"
-			rel="noopener"
-			class="opacity-85 transition hover:opacity-100"
-		>
-			<Logo name="siSass" className="size-8 fade-in opacity-0" style="animation-delay: 3.2s;" />
-		</a>
+		<TechCardGrid title="Frameworks">
+			<TechCard
+				logo={SiSvelte}
+				name="SvelteKit"
+				description="Full stack application framework built on top of Svelte"
+				since={2024}
+				url="https://svelte.dev/docs/kit/introduction"
+			/>
+			<TechCard
+				logo={SiSvelte}
+				name="Svelte"
+				description="JavaScript framework for building web user interfaces"
+				since={2024}
+				url="https://svelte.dev/"
+			/>
+			<TechCard
+				logo={SiTauri}
+				name="Tauri"
+				description="Rust framework for building desktop applications"
+				since={2025}
+				url="https://tauri.app/"
+			/>
+		</TechCardGrid>
 
-		<a
-			href="https://tailwindcss.com"
-			target="_blank"
-			rel="noopener"
-			class="opacity-85 transition hover:opacity-100"
-		>
-			<Logo name="siTailwindcss" className="size-8 fade-in opacity-0" style="animation-delay: 3.3s;" />
-		</a>
+		<TechCardGrid title="Programming Languages">
+			<TechCard
+				logo={SiRust}
+				name="Rust"
+				description="Low-level programming language that runs fast and is memory safe"
+				since={2024}
+				url="https://www.rust-lang.org/"
+			/>
+			<TechCard
+				logo={SiTypescript}
+				name="TypeScript"
+				description="Typed superset of JavaScript that compiles to plain JavaScript"
+				since={2022}
+				url="https://typescriptlang.org/"
+			/>
+			<TechCard
+				logo={Coffee}
+				name="Java"
+				description="High-level, object-oriented programming language"
+				since={2022}
+				url="https://www.java.com/en/"
+			/>
+			<TechCard
+				logo={SiJavascript}
+				name="JavaScript"
+				description="The programming language of the web that runs in the browser"
+				since={2021}
+				url="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+			/>
+			<TechCard
+				logo={SiPhp}
+				name="PHP"
+				description="Server-side scripting language for web development"
+				since={2021}
+				url="https://www.php.net/"
+			/>
+			<TechCard
+				logo={SiPython}
+				name="Python"
+				description="High-level programming language for general-purpose programming"
+				since={2020}
+				url="https://www.python.org/"
+			/>
+		</TechCardGrid>
 
-		<a
-			href="https://typescriptlang.org"
-			target="_blank"
-			rel="noopener"
-			class="opacity-85 transition hover:opacity-100"
-		>
-			<Logo name="siTypescript" className="size-8 fade-in opacity-0" style="animation-delay: 3.4s;" />
-		</a>
+		<TechCardGrid title="Servers, Cloud & Hosting">
+			<TechCard
+				logo={SiCloudflare}
+				name="Cloudflare Pages"
+				description="Edge computing platform for deploying and hosting websites"
+				since={2024}
+				url="https://www.cloudflare.com/developer-platform/products/pages/"
+			/>
+			<TechCard
+				logo={SiNginx}
+				name="NGINX"
+				description="Web server that can also be used as a reverse proxy, load balancer etc."
+				since={2022}
+				url="https://nginx.org/"
+			/>
+			<TechCard
+				logo={SiApache}
+				name="Apache HTTP"
+				description="FOSS web server software with support for programming languages like PHP"
+				since={2021}
+				url="https://httpd.apache.org/"
+			/>
+		</TechCardGrid>
 
-		<a
-			href="https://nodejs.org"
-			target="_blank"
-			rel="noopener"
-			class="opacity-85 transition hover:opacity-100"
-		>
-			<Logo name="siNodedotjs" className="size-8 fade-in opacity-0" style="animation-delay: 3.5s;" />
-		</a>
+		<TechCardGrid title="Platforms">
+			<TechCard
+				logo={SiNodedotjs}
+				name="Node.js"
+				description="JavaScript runtime built on Chrome's V8 JavaScript engine"
+				since={2021}
+				url="https://nodejs.org/"
+			/>
+			<TechCard
+				logo={SiFirefox}
+				name="Firefox"
+				description="Web browser developed by Mozilla"
+				since={2020}
+				url="https://www.mozilla.org/en-US/firefox/new/"
+			/>
+		</TechCardGrid>
 
-		<a
-			href="https://sqlite.org"
-			target="_blank"
-			rel="noopener"
-			class="opacity-85 transition hover:opacity-100"
-		>
-			<Logo name="siSqlite" className="size-8 fade-in opacity-0" style="animation-delay: 3.6s;" />
-		</a>
+		<TechCardGrid title="Operating Systems">
+			<TechCard
+				logo={SiArchlinux}
+				name="Arch Linux"
+				description="Lightweight and flexible Linux distribution that tries to keep it simple"
+				since={2024}
+				url="https://archlinux.org/"
+			/>
+			<TechCard
+				logo={SiDebian}
+				name="Debian"
+				description="Stable and secure Linux distribution that comes with a lot of packages"
+				since={2023}
+				url="https://www.debian.org/"
+			/>
+			<TechCard
+				logo={SiUbuntu}
+				name="Ubuntu Desktop"
+				description="Popular Linux distribution that is easy to use"
+				since={2023}
+				url="https://ubuntu.com/desktop"
+			/>
+			<TechCard
+				logo={SiRaspberrypi}
+				name="Raspberry Pi OS"
+				description="Operating system for the Raspberry Pi single-board computer"
+				since={2021}
+				url="https://www.raspberrypi.org/software/"
+			/>
+			<TechCard
+				logo={Grid2X2}
+				name="Windows"
+				description="Operating system developed by Microsoft"
+				since={2016}
+				url="https://www.microsoft.com/en-us/windows"
+			/>
+			<TechCard
+				logo={SiAndroid}
+				name="Android"
+				description="Mobile operating system developed by Google"
+				since={2014}
+				url="https://www.android.com/"
+			/>
+		</TechCardGrid>
 
-		<a
-			href="https://git-scm.com"
-			target="_blank"
-			rel="noopener"
-			class="opacity-85 transition hover:opacity-100"
-		>
-			<Logo name="siGit" className="size-8 fade-in opacity-0" style="animation-delay: 3.7s" />
-		</a>
+		<TechCardGrid title="Styling & Design">
+			<TechCard
+				logo={SiSass}
+				name="SCSS"
+				description="CSS preprocessor that adds power and elegance to the basic language"
+				since={2022}
+				url="https://sass-lang.com/"
+			/>
+			<TechCard
+				logo={SiTailwindcss}
+				name="Tailwind CSS"
+				description="Utility-first CSS framework for quickly building custom designs"
+				since={2024}
+				url="https://tailwindcss.com"
+			/>
+			<TechCard
+				logo={SiCss}
+				name="CSS"
+				description="Cascading Style Sheets that are used to style web pages"
+				since={2021}
+				url="https://developer.mozilla.org/en-US/docs/Web/CSS"
+			/>
+		</TechCardGrid>
 
-		<a
-			href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-			target="_blank"
-			rel="noopener"
-			class="opacity-85 transition hover:opacity-100"
-		>
-			<Logo name="siJavascript" className="size-8 fade-in opacity-0" style="animation-delay: 3.8s;" />
-		</a>
+		<TechCardGrid title="Tools">
+			<TechCard
+				logo={SiVscodium}
+				name="VSCodium"
+				description="Free and open-source code editor that is a binary distribution of VSCode"
+				since={2021}
+				url="https://vscodium.com/"
+			/>
+			<TechCard
+				logo={SiGit}
+				name="Git"
+				description="Distributed version control system for tracking changes in source code"
+				since={2021}
+				url="https://git-scm.com/"
+			/>
+			<TechCard
+				logo={SiGithub}
+				name="GitHub"
+				description="Web-based Git repository hosting service"
+				since={2021}
+				url="https://github.com/"
+			/>
+			<TechCard
+				logo={SiEslint}
+				name="ESLint"
+				description="Pluggable linting utility for JavaScript & TypeScript"
+				since={2023}
+				url="https://eslint.org/"
+			/>
+			<TechCard
+				logo={SiPrettier}
+				name="Prettier"
+				description="Opinionated code formatter that enforces a consistent code style"
+				since={2023}
+				url="https://prettier.io/"
+			/>
+		</TechCardGrid>
 
-		<a
-			href="https://php.net"
-			target="_blank"
-			rel="noopener"
-			class="opacity-85 transition hover:opacity-100"
-		>
-			<Logo name="siPhp" className="size-8 fade-in opacity-0" style="animation-delay: 3.9s;" />
-		</a>
-
-		<a
-			href="https://cloudflare.com/developer-platform"
-			target="_blank"
-			rel="noopener"
-			class="opacity-85 transition hover:opacity-100"
-		>
-			<Logo name="siCloudflare" className="size-8 fade-in opacity-0" style="animation-delay: 4s;" />
-		</a>
-
-		<a
-			href="https://archlinux.org"
-			target="_blank"
-			rel="noopener"
-			class="opacity-85 transition hover:opacity-100"
-		>
-			<Logo name="siArchlinux" className="size-8 fade-in opacity-0" style="animation-delay: 4.1s;" />
-		</a>
+		<TechCardGrid title="Other">
+			<TechCard
+				logo={SiHtml5}
+				name="HTML"
+				description="Markup language for structuring and presenting content on the web"
+				since={2021}
+				url="https://developer.mozilla.org/en-US/docs/Web/HTML"
+			/>
+		</TechCardGrid>
 	</div>
 </div>

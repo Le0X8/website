@@ -1,55 +1,23 @@
 <script lang="ts">
 	import '../styles/global.scss';
-	import { Menu, ArrowLeft, ChevronDown, ChevronUp, ExternalLink } from 'lucide-svelte';
-
-	const navEntries: { name: string; href: string; external?: boolean }[] = [
-		{ name: 'About', href: '/about' },
-		{ name: 'Projects', href: '/projects' },
-		{ name: 'Contact', href: '/contact' },
-		{ name: 'GitHub', href: 'https://github.com/Le0X8', external: true }
-	];
+	import { ChevronsRight } from 'lucide-svelte';
 </script>
 
-<div class="h-12 bg-teal-950"></div>
+<nav class="fixed h-12 w-full"></nav>
 
-<nav
-	class="fixed top-0 flex h-12 w-lvw border-b-2 border-teal-700 bg-transparent text-white backdrop-blur-md z-50"
+<main
+	class="min-h-lvh w-full bg-white py-24 text-zinc-950 dark:bg-zinc-950 dark:text-white print:py-0"
 >
-	<a href="/" class="overflow-hidden">
-		<header class="px-2 py-1 text-3xl font-thin">Leonard Lesinski</header>
-	</a>
-	<div class="flex-grow"></div>
-	<input type="checkbox" id="menu-toggle" class="peer hidden" />
-	<ul
-		class="fixed top-12 hidden h-[calc(100vh-3rem)] w-full flex-col sm:flex-row gap-2 p-2 text-xl backdrop-blur-md peer-checked:flex sm:static sm:flex sm:h-auto sm:w-fit sm:backdrop-blur-0"
-	>
-		{#each navEntries as { name, href, external }}
-			<li
-				class="flex items-center justify-center gap-1 border-r-teal-700 py-2 pr-2 underline decoration-transparent transition last:border-r-0 last:pr-0 hover:decoration-teal-600 sm:h-full sm:border-r-2"
-			>
-				<a {href} class="flex items-center justify-center gap-1">
-					{name}
-					{#if external}
-						<ExternalLink class="inline-block size-4" />
-					{/if}
-				</a>
-			</li>
-		{/each}
-	</ul>
-	<label
-		for="menu-toggle"
-		class="flex cursor-pointer items-center justify-center p-2 text-white transition hover:text-teal-600 peer-checked:text-teal-600 peer-checked:hover:text-white sm:hidden"
-	>
-		<Menu class="size-6" />
-	</label>
-</nav>
-
-<main class="min-h-[calc(100vh-3rem)] bg-teal-950 text-white">
-	<div class="max-w-3xl mx-auto py-8 md:p-2">
+	<ChevronsRight
+		class="fixed left-[-20lvh] z-1 size-lvh rotate-30 text-zinc-100 dark:text-zinc-900 print:hidden"
+	></ChevronsRight>
+	<div class="relative z-10 w-full px-4 lg:px-24 print:px-0">
 		<slot />
 	</div>
 </main>
 
-<footer class="w-full bg-teal-700 p-2 text-center text-white">
+<footer
+	class="absolute z-20 w-full border-t p-2 text-center text-zinc-600 dark:border-t-0 dark:bg-teal-700 dark:text-white print:hidden"
+>
 	&copy; 2021-{new Date().getFullYear()} Leonard Lesinski
 </footer>
