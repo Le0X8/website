@@ -29,6 +29,7 @@ html {
 .mouse-cursor-gradient-tracking {
 	overflow: hidden;
 	position: relative;
+	z-index: 0;
 
 	&::before {
 		--size: 0;
@@ -43,10 +44,15 @@ html {
 		transition:
 			width 0.2s ease,
 			height 0.2s ease;
+		z-index: -1;
 
 		@media (prefers-color-scheme: dark) {
 			background: radial-gradient(circle closest-side, #fff2, transparent);
 		}
+	}
+
+	&.dark::before {
+		background: radial-gradient(circle closest-side, #fff2, transparent);
 	}
 
 	&:hover::before {

@@ -19,5 +19,8 @@
 <footer
 	class="absolute z-20 w-full border-t p-2 text-center text-zinc-600 dark:border-t-0 dark:bg-teal-700 dark:text-white print:hidden"
 >
-	&copy; 2021-{new Date().getFullYear()} Leonard Lesinski
+	<p>&copy; 2021-{new Date().getFullYear()} Leonard Lesinski</p>
+	<p class="text-sm">
+		<a href="/imprint" class="underline">Imprint</a>
+	</p>
 </footer>
