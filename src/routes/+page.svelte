@@ -50,7 +50,7 @@
 		class="flex w-full scale-none flex-col items-center text-xl md:w-fit md:-translate-y-[5rem] md:scale-75 md:items-start lg:translate-none lg:scale-none print:hidden"
 	>
 		<img
-			src="https://cdn.donald.org/avatars/e70d85cb94ff55dd5500134068b28079.webp"
+			src="https://cdn.donald.org/avatars/0dd63e361d922bf946586be89c89b9d5.webp"
 			alt="this is me"
 			class="w-42 rounded-full md:w-74 print:h-74"
 		/>
