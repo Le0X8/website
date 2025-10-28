@@ -1,26 +1,26 @@
 <script lang="ts">
-	import '../styles/global.scss';
-	import { ChevronsRight } from 'lucide-svelte';
+	import '../app.css';
+	import favicon from '$lib/assets/favicon.svg';
+	import Navigation from '$c/Navigation.svelte';
+	import Footer from '$c/Footer.svelte';
+	import { ModeWatcher } from 'mode-watcher';
+	import { page } from '$app/state';
+
+	let root = $derived(page.url.pathname === '/');
+
+	let { children } = $props();
 </script>
 
-<nav class="fixed h-12 w-full"></nav>
+<svelte:head>
+	<link rel="icon" href={favicon} />
+</svelte:head>
 
-<main
-	class="min-h-lvh w-full bg-white py-24 text-zinc-950 dark:bg-zinc-950 dark:text-white print:py-0"
->
-	<ChevronsRight
-		class="fixed left-[-20lvh] z-1 size-lvh rotate-30 text-zinc-100 dark:text-zinc-900 print:hidden"
-	></ChevronsRight>
-	<div class="relative z-10 w-full px-4 lg:px-24 print:px-0">
-		<slot />
-	</div>
+<ModeWatcher />
+
+<Navigation root />
+
+<main class={['prose max-w-none prose-neutral dark:prose-invert']}>
+	{@render children?.()}
 </main>
 
-<footer
-	class="absolute z-20 w-full border-t p-2 text-center text-zinc-600 dark:border-t-0 dark:bg-teal-700 dark:text-white print:hidden"
->
-	<p>&copy; 2021-{new Date().getFullYear()} Leonard Lesinski</p>
-	<p class="text-sm">
-		<a href="/imprint" class="underline">Imprint</a>
-	</p>
-</footer>
+<Footer />
