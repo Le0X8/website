@@ -7,9 +7,10 @@
 
 <nav
 	class={[
-		'top-2 right-2 left-2 z-50 flex h-12 items-center justify-start rounded-lg px-4 backdrop-blur-md backdrop-brightness-50',
+		'hidden md:flex',
+		'top-2 right-2 left-2 z-50 h-12 items-center justify-start rounded-lg px-4 text-white backdrop-blur-md backdrop-brightness-50',
 		root && 'absolute backdrop-blur-none backdrop-brightness-100',
-		!root && 'fixed'
+		!root && 'fixed border-border dark:border'
 	]}
 >
 	<a

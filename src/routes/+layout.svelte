@@ -17,9 +17,9 @@
 
 <ModeWatcher />
 
-<Navigation root />
+<Navigation {root} />
 
-<main class={['prose max-w-none prose-neutral dark:prose-invert']}>
+<main class={['prose min-h-lvh max-w-none prose-neutral dark:prose-invert']}>
 	{@render children?.()}
 </main>
 
