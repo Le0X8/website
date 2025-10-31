@@ -15,29 +15,49 @@ export const entries: EntryGenerator = async () => {
 				path: 'posts/' + path.replace('/src/posts/', '').replace('.svx', '').replaceAll('_', '/')
 			}))
 		)
-		.concat([{ path: 'posts' }]);
+		.concat([{ path: 'posts' }, { path: 'posts/linux' }, { path: 'posts/cs101' }]);
 };
 
 export async function load({ params }) {
 	try {
-		if (params.path === 'posts') {
-			const posts: Post[] = [];
+		if (params.path === 'posts' || params.path === 'posts/linux' || params.path === 'posts/cs101') {
+			let posts: Post[] = [];
 
-			const paths = import.meta.glob('/src/pages/posts/*.svx', { eager: true });
+			const paths = import.meta.glob('/src/posts/*.svx', { eager: true });
 
 			for (const pathElement in paths) {
 				const file = paths[pathElement];
 				const path = pathElement.split('/').at(-1)?.replace('.svx', '');
 
-				if (file && typeof file === 'object' && 'metadata' in file && path) {
-					const metadata = file.metadata as Omit<Post, 'slug'>;
-					const post = { ...metadata, path } satisfies Post;
+				if (file && typeof file === 'object' && path) {
+					const post = {
+						...('metadata' in file ? (file.metadata as Omit<Post, 'slug'>) : {}),
+						path
+					} satisfies Post;
 					posts.push(post);
 				}
 			}
 
+			const category = params.path.slice(6);
+
+			if (params.path !== 'posts') {
+				posts = posts.filter(
+					(post) => post.path.slice(0, category.length) === params.path.slice(6)
+				);
+			}
+
+			posts = posts
+				.map((post) => ({
+					...post,
+					title: post.title || 'Untitled',
+					path: post.path.replaceAll('_', '/')
+				}))
+				.sort((a, b) => {
+					return new Date(b.date ?? 0).getTime() - new Date(a.date ?? 0).getTime();
+				});
+
 			return {
-				meta: posts,
+				meta: { posts, category },
 				type: 'list'
 			};
 		}

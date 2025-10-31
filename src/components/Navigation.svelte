@@ -15,7 +15,7 @@
 >
 	<a
 		href="/"
-		class="basis-1/4 text-2xl underline decoration-transparent transition hover:decoration-current"
+		class="basis-1/4 text-2xl leading-6 underline decoration-transparent transition hover:decoration-current"
 	>
 		{root ? '' : 'Leonard Lesinski'}
 	</a>
@@ -23,10 +23,18 @@
 	<div class="flex basis-1/2 items-center justify-center">
 		<NavigationMenu.Root viewport={false}>
 			<NavigationMenu.List class={[root && 'text-white']}>
-				<NavItem title="Projects" {root} children={[]} />
-				<NavItem title="Contributions" {root} children={[]} />
-				<NavItem title="Blog" {root} children={[]} />
-				<NavItem title="Playground" {root} children={[]} />
+				<NavItem title="Projects" {root} children={[['Coming soon™', '#']]} />
+				<NavItem title="Contributions" {root} children={[['Coming soon™', '#']]} />
+				<NavItem
+					title="Blog"
+					{root}
+					children={[
+						['Linux', '/posts/linux'],
+						['CS101', '/posts/cs101'],
+						['All posts', '/posts']
+					]}
+				/>
+				<NavItem title="Playground" {root} children={[['Coming soon™', '#']]} />
 			</NavigationMenu.List>
 		</NavigationMenu.Root>
 	</div>

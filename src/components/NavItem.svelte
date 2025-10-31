@@ -48,7 +48,21 @@
 		<ul class="grid w-42 gap-4 p-2">
 			<li>
 				{#each children as [childTitle, childHref]}
-					<NavigationMenu.Link href={childHref}>{childTitle}</NavigationMenu.Link>
+					<NavigationMenu.Link
+						href={childHref}
+						class={[
+							'bg-transparent',
+							'hover:bg-white/10',
+							'focus:bg-white/10',
+
+							'hover:text-white',
+							'focus:text-white',
+							'text-white',
+							'text-lg'
+						]}
+					>
+						{childTitle}
+					</NavigationMenu.Link>
 				{/each}
 			</li>
 		</ul>

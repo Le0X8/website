@@ -2,8 +2,6 @@
 title: Privacy Policy
 ---
 
-# Privacy Policy
-
 This website does not collect any personal data. For your privacy and security, no cookies, trackers, advertisement or analytics tools are used.
 
 However, GitHub Pages, the hosting service for this website, may collect some data as described in their [Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement). This data is only collected by GitHub on the server side and not by this website.

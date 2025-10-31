@@ -4,4 +4,5 @@ export interface Page {
 
 export interface Post extends Page {
 	path: string;
+	date?: string;
 }
