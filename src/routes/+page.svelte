@@ -96,7 +96,7 @@
 	>
 		<div>
 			<img
-				src="https://cdn.donald.org/avatars/0dd63e361d922bf946586be89c89b9d5.webp"
+				src="https://cdn.donald.org/avatars/5ed4b562f1d2a00f4a28959283f6b72c.webp"
 				alt="Me"
 				class={['size-48']}
 			/>
